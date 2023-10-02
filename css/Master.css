@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300;400;700;800;1000&family=Jomhuria&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  --primary-color: #ff2740;
+  --primary-color1: #ff274070;
+  --secondary-color: #f7bcf7;
+  --light-color: #ffffffff;
+  --bgColor-1: #171a1c;
+  --bgColor-2: #22282a;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --padding: 8%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+.bars {
+  display: none;
+}
+
+.left {
+  left: 0;
+}
+i {
+  cursor: pointer;
+}
+
+.search-btn {
+  background-color: var(--bgColor-1);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+html {
+  font-size: 16px;
+}
+
+a {
+  color: var(--light-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 4.65rem;
+  margin: 1.7rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: 0.12rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  letter-spacing: 0.12rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+h2.toggle {
+  transition: 0.4s;
+  border-bottom: var(--light) solid 10px;
+}
+
+span {
+  color: var(--primary-color);
+}
+
+.shapes-con {
+  background-color: var(--bgColor-1);
+}
+
+.shapes-con .shape {
+  position: absolute;
+  height: 28%;
+  width: 15%;
+  background-color: var(--red-color);
+  border-radius: 50%;
+  padding: 20px 0;
+  opacity: 0.5;
+}
+
+.shapes-con .shape-1 {
+  top: -25px;
+  left: -66px;
+}
+.home-container {
+  padding: 0 var(--padding);
+  min-height: 100vh;
+  background-color: var(--bgColor-1);
+}
+
+main {
+  background-color: var(--bgColor-1);
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+
+header {
+  padding-top: 20px;
+  color: var(--red-color);
+}
+
+header .logo {
+  color: var(--red-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav {
+  margin-right: 200px;
+}
+
+header nav ul li {
+  display: inline-flex;
+  margin-left: 40px;
+}
+
+header nav ul li a {
+  transition: 0.4s;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: var(--red-color);
+}
+
+main .int {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 200px;
+}
+
+main .int .int-img {
+  height: 400px;
+}
+
+.up {
+  --color: #00a97f;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--red-color);
+  z-index: 1;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  right: -100px;
+}
+
+.up::before,
+.up::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--red-color);
+  transition: 1s ease;
+}
+
+.up::before {
+  top: -1em;
+  left: -1em;
+}
+
+.up::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.up:hover::before,
+.up:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.up:hover {
+  color: rgb(10, 25, 30);
+}
+
+.up:active {
+  filter: brightness(0.8);
+}
+
+.button {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge var(--red-color);
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.button:hover::before,
+.button:hover::after {
+  transform: scale(0);
+}
+
+.button:hover {
+  box-shadow: inset 0px 0px 25px var(--red-color);
+}
+
+main .int .int-content .int-text h2 {
+  font-weight: bolder;
+  color: var(--red-color);
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+main .int .int-content .int-text p {
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+main .int .int-content .social-icons a.soc-soc {
+  margin-left: 20px;
+}
+
+main .int .int-content .social-icons a {
+  color: #000;
+  transition: 0.4s;
+}
+
+main .int .int-content .social-icons a:hover {
+  color: rgba(43, 39, 39, 0.664);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+  margin-top: 20px;
+}
+
+.p-i {
+  margin-top: 20px;
+}
+
+.html {
+  width: 1%;
+  background-color: #04aa6d;
+  transition: 0.4s;
+}
+.css {
+  width: 1%;
+  background-color: #2196f3;
+  transition: 0.4s;
+}
+.js {
+  width: 1%;
+  background-color: #f44336;
+  transition: 0.4s;
+}
+.Boot {
+  width: 1%;
+  background-color: #808080;
+  transition: 0.4s;
+}
+
+.sass {
+  width: 1%;
+  background-color: var(--red-color);
+  transition: 0.4s;
+}
+
+.about-us {
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  margin-top: 200px;
+}
+.pic {
+  height: auto;
+  width: 302px;
+}
+.about {
+  width: 1130px;
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.text {
+  width: 540px;
+}
+.text h2 {
+  font-size: 90px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.text h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+span {
+  color: #4070f4;
+}
+.text p {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.data {
+  margin-top: 30px;
+}
+.hire {
+  font-size: 18px;
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 25px;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+.hire:hover {
+  background: #000;
+  border: 1px solid #4070f4;
+}
+
+.contact-section {
+  padding-bottom: 40px;
+}
+
+.card1 {
+  padding: 20px;
+  background-color: var(--red-color);
+  margin-top: 20px;
+  margin-bottom: -1px;
+  width: 607px;
+  color: #fff;
+}
+
+.loader {
+  --col1: rgba(228, 19, 141, 0.925);
+  --col2: rgb(255, 179, 80);
+  font-size: 2em;
+  font-weight: 600;
+  perspective: 800px;
+  position: relative;
+}
+
+.loader::after,
+.loader::before,
+.loader .text::after,
+.loader .text::before {
+  perspective: 800px;
+  animation: anim 2s ease-in-out infinite,
+    dotMove 10s ease-out alternate infinite, move 10s linear infinite 1s;
+  content: "●";
+  color: var(--col1);
+  position: absolute;
+  translate: -60px 500px;
+  width: 5px;
+  height: 5px;
+}
+
+.loader::before {
+  animation-delay: 3s;
+  color: var(--col1);
+}
+
+.loader .text::before {
+  color: var(--col2);
+  animation-delay: 2s;
+}
+
+.loader .text::after {
+  color: var(--col2);
+}
+
+.loader .text {
+  animation: anim 20s linear infinite, move 10s linear infinite 1s;
+  color: transparent;
+  background-image: linear-gradient(90deg, var(--col1) 0%, var(--col2) 100%);
+  background-clip: text;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: skew(5deg, -5deg);
+  -webkit-background-clip: text;
+  position: relative;
+}
+
+@keyframes anim {
+  0%,
+  100% {
+    text-shadow: 2px 0px 2px rgba(179, 158, 158, 0.5);
+  }
+
+  50% {
+    background-size: 0%;
+    background-position-x: left;
+    text-shadow: 2px 10px 6px rgba(179, 158, 158, 1);
+  }
+}
+
+@keyframes move {
+  50% {
+    translate: 0px 0px;
+    rotate: x 60deg;
+    transform: skew(-5deg, 5deg);
+  }
+}
+
+.products {
+  padding-bottom: 100px;
+}
+
+.pro-h2 {
+  color: var(--red-color);
+  margin-top: 50px;
+  position: absolute;
+  transition: 2s;
+  left: -100;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cards-container {
+  margin-top: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-left: 30px;
+  display: none;
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+.card-1 {
+  background: url("./../images/2p.png");
+}
+
+.card-2 {
+  background: url("./../images/3p.png");
+}
+
+.card-3 {
+  background: url("./../images/4.jpg");
+}
+
+.card-4 {
+  background: url("./../images/5.jpg");
+}
